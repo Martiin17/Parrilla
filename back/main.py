@@ -2,15 +2,15 @@ import csv
 import os
 import datetime
 
-FILE_PATH_PRICES = '/home/martin/Desktop/Parrilla/files/precios.csv'
-FILE_PATH_SALES = '/home/martin/Desktop/Parrilla/files/ventas.csv'
+FILE_PATH_PRODUCTS = '/home/martin/Desktop/Parrilla/files/products.csv'
+FILE_PATH_SALES = '/home/martin/Desktop/Parrilla/files/sales.csv'
 
 def show_menu():
     print("\n ------------------ WELCOME ------------")
     print(" Menu: ")
 
-    with open(FILE_PATH_PRICES, mode='r', encoding='utf-8') as file:
-        reader = csv.reader(file)
+    with open(FILE_PATH_PRODUCTS, mode='r', encoding='utf-8') as file_products:
+        reader = csv.reader(file_products)
         i = 0
         for row in reader:
             i +=1
@@ -36,20 +36,36 @@ def get_last_id():
 
     return last_id
 
+def write_csv(path, new_id, products, total):
+    with open(path, mode='a', newline='', encoding='utf-8') as file_sales:
+        writer = csv.writer(file_sales)
+
+        now = datetime.datetime.now()
+        date = now.date()
+        time = now.time()
+
+        writer.writerow([new_id, products, total, date, time])
+
+def get_products_list(path):
+    with open(path, mode='r', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            reader_list = list(reader)
+
+            return reader_list
+
 def main():
     finish = False
     total = 0.0
 
-    products = []
+    products_added = []
 
     new_id = get_last_id() + 1
 
-    with open(FILE_PATH_PRICES, mode='r', encoding='utf-8') as file:
-        reader = csv.reader(file)
-        reader_list = list(reader)
+    products_list = get_products_list(FILE_PATH_PRODUCTS)
 
     while finish == False:
         lenght = show_menu()
+
         try:
             option = int(input("Select the product: "))
         except ValueError:
@@ -58,23 +74,18 @@ def main():
 
         if option > lenght or option <= 0:
             print("Invalid Option")
+
         elif option == lenght:
-            with open(FILE_PATH_SALES, mode='a', newline='', encoding='utf-8') as file_sales:
-                writer = csv.writer(file_sales)
-
-                now = datetime.datetime.now()
-                date = now.date()
-                time = now.time()
-
-                writer.writerow([new_id, products, total, date, time])
+            write_csv(FILE_PATH_SALES, new_id, products_added, total)
 
             print(f"Total: {total}")
             print("Thanks for buying here!")
             finish = True
+
         else:
-            price = float(reader_list[option - 1][1])
+            price = float(products_list[option - 1][1])
             total += price
-            products.append(reader_list[option - 1][0])
+            products_added.append(products_list[option - 1][0])
             print(f"Added item. Current total: {total}")
 
 if __name__ == "__main__":
