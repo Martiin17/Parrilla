@@ -1,9 +1,13 @@
 import csv
 import os
 import datetime
+import os
+from dotenv import load_dotenv
 
-FILE_PATH_PRODUCTS = '/home/martin/Desktop/Parrilla/files/products.csv'
-FILE_PATH_SALES = '/home/martin/Desktop/Parrilla/files/sales.csv'
+load_dotenv()
+
+FILE_PATH_PRODUCTS = os.getenv('FILE_PATH_PRODUCTS')
+FILE_PATH_SALES = os.getenv('FILE_PATH_SALES')
 
 def show_menu():
     print("\n ------------------ WELCOME ------------")
@@ -28,7 +32,6 @@ def get_last_id():
             
             if len(reader) > 0:
                 last_id = int(reader[-1][0])
-                print(f"El último ID es: {last_id}")
             else:
                 last_id = 0
     else:
