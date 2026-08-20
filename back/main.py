@@ -1,5 +1,6 @@
 import csv
 import os
+import datetime
 
 FILE_PATH_PRICES = '/home/martin/Desktop/Parrilla/files/precios.csv'
 FILE_PATH_SALES = '/home/martin/Desktop/Parrilla/files/ventas.csv'
@@ -60,7 +61,12 @@ def main():
         elif option == lenght:
             with open(FILE_PATH_SALES, mode='a', newline='', encoding='utf-8') as file_sales:
                 writer = csv.writer(file_sales)
-                writer.writerow([new_id, products, total])
+
+                now = datetime.datetime.now()
+                date = now.date()
+                time = now.time()
+
+                writer.writerow([new_id, products, total, date, time])
 
             print(f"Total: {total}")
             print("Thanks for buying here!")
