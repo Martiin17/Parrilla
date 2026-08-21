@@ -15,3 +15,11 @@ Se espera que para el MVP se pueda:
 - Leer precios de un csv "precios.csv"
 - Menu interactuable para tomar la orden por consola
 - Guardar ventas en un archivo "ventas.csv"
+
+## Sprint 2
+
+Como paso previo al guardado en el Excel, se va a utilizar la libreria SupaBase para guardar los datos en una base de datos relacional. Al ser poco trafico de datos se utilizara la versión gratuita que cuenta con un limite más que suficiente para las necesidades de este proyecto.
+
+## Sprint 3
+
+Se utilizara Streamlit con el fin de contar con un frontend sencillo e intuitivo. Ademas de la posibilidad de poder usar el software desde el celular.
