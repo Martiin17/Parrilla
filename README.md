@@ -23,3 +23,7 @@ Como paso previo al guardado en el Excel, se va a utilizar la libreria SupaBase 
 ## Sprint 3
 
 Se utilizara Streamlit con el fin de contar con un frontend sencillo e intuitivo. Ademas de la posibilidad de poder usar el software desde el celular.
+
+## Descubrimiento de Nueva Tecnologia
+
+En la búsqueda de librerías y bases de datos para avanzar con el proyecto me tope con que Google cuenta con un Software llamado "AppSheet" que crea páginas con las funciones que necesito. Una vez realizada pondre el link aquí!
