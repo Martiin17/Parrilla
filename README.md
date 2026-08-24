@@ -26,4 +26,17 @@ Se utilizara Streamlit con el fin de contar con un frontend sencillo e intuitivo
 
 ## Descubrimiento de Nueva Tecnologia
 
-En la búsqueda de librerías y bases de datos para avanzar con el proyecto me tope con que Google cuenta con un Software llamado "AppSheet" que crea páginas con las funciones que necesito. Una vez realizada pondre el link aquí!
+En la búsqueda de librerías y bases de datos para avanzar con el proyecto me tope con que Google cuenta con un Software llamado "AppSheet" que crea páginas con las funciones que necesito.
+
+Link web: https://www.appsheet.com/start/2ad7a295-00d8-4d41-9400-84199c2af3b8
+Link Mobile: https://www.appsheet.com/newshortcut/2ad7a295-00d8-4d41-9400-84199c2af3b8
+
+--- 
+### Pros y Contras de AppSheet
+
+Como pros es muy fácil de crear, no necesitas experiencia programando y es una manera rápida de hacer un prototipo funcional.
+Como contras la app en mobile es lenta, la interfaz no es bonita y tenes limitaciones de lo que podes hacer.
+
+## Aprendizaje
+
+Aprendí que es conveniente buscar primero las tecnologías a utilizar, trazar un plan de ruta y luego ejecutarlos. Hoy en día hay muchas tecnologías nuevas y que salen constantemente por lo que seguro haya alguna que satisfaga mis necesidades.
