@@ -29,6 +29,7 @@ Se utilizara Streamlit con el fin de contar con un frontend sencillo e intuitivo
 En la búsqueda de librerías y bases de datos para avanzar con el proyecto me tope con que Google cuenta con un Software llamado "AppSheet" que crea páginas con las funciones que necesito.
 
 Link web: https://www.appsheet.com/start/2ad7a295-00d8-4d41-9400-84199c2af3b8
+
 Link Mobile: https://www.appsheet.com/newshortcut/2ad7a295-00d8-4d41-9400-84199c2af3b8
 
 --- 
